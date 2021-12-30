@@ -33,6 +33,8 @@ async def on_message(message):
         return
     if message.content.startswith('@要玩啥'):
       await message.channel.send(mf.remdom_game())
+    if client.user.mentioned_in(message):
+      await message.channel.send('衝三小')
     if message.content.startswith('@可以色色'):
       tmp = message.content.split(" ",2)
       #如果分割後串列長度只有1
@@ -41,4 +43,4 @@ async def on_message(message):
       else:
         await message.channel.send("那我推薦你:"+" "+mf.porn(tmp[1])) 
 
-client.run('Your Token') #TOKEN 在剛剛 Discord Developer 那邊「BOT」頁面裡面
+client.run('ODU1ODU1Njc2OTczNTE0Nzcy.YM4jtg.RjQs6vQngBGkf2uu2IFwkKyj1nw') #TOKEN 在剛剛 Discord Developer 那邊「BOT」頁面裡面

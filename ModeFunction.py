@@ -10,13 +10,15 @@ def remdom_game():
   game = ['CSGO', '單中', 'APEX','死人棋']
   return random.choice(game)
 
-#爬蟲相關
+#爬蟲(PornHub)
 def porn(index):
   data=[]
   r = requests.get("https://cn.pornhub.com/video/search?search="+index) #將網頁資料GET下來
   soup = BeautifulSoup(r.text,"html.parser") #將網頁資料以html.parser
-  sel = soup.select("span.title a") #取HTML標中的 <div class="title"></div> 中的<a>標籤存入sel
+  sel = soup.select("span.title a") #取HTML標中的 <span class="title"></span> 中的<a>標籤存入sel
   for s in sel:
     data.append("https://cn.pornhub.com" + s["href"])
     #print("https://cn.pornhub.com" + s["href"], s.text) 
   return random.choice(data)
+
+
