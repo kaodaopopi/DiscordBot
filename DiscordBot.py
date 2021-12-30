@@ -56,4 +56,4 @@ async def on_message(message):
       else:
         await message.channel.send("那我推薦你:"+" "+porn(tmp[1])) 
 
-client.run('ODU1ODU1Njc2OTczNTE0Nzcy.YM4jtg.NW5QbESSqCFw1kjesyCBMp7uS3E') #TOKEN 在剛剛 Discord Developer 那邊「BOT」頁面裡面
+client.run('Your Token') #TOKEN 在剛剛 Discord Developer 那邊「BOT」頁面裡面
