@@ -25,6 +25,7 @@ async def on_ready():
     #discord.Status.<狀態>，可以是online,offline,idle,dnd,invisible
     await client.change_presence(status=discord.Status.online, activity=game)
     
+
 @client.event
 #當有訊息時
 async def on_message(message):
@@ -33,6 +34,9 @@ async def on_message(message):
         return
     if message.content.startswith('@要玩啥'):
       await message.channel.send(mf.remdom_game())
+    if message.content.startswith('@習巴拉'):
+      await message.channel.send(files=mf.dice())
+      #await message.channel.send(file=discord.File(mf.dice()))
     if client.user.mentioned_in(message):
       await message.channel.send('衝三小')
     if message.content.startswith('@可以色色'):
