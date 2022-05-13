@@ -23,7 +23,7 @@ def porn(index):
     #print("https://cn.pornhub.com" + s["href"], s.text) 
   return random.choice(data)
 
-#爬蟲(PornHub)
+#骰子遊戲(18拉)
 def dice():
   my_files = ['pic/0.png','pic/1.png','pic/2.png','pic/3.png','pic/4.png','pic/5.png']
 
@@ -31,7 +31,7 @@ def dice():
     discord.File(random.choice(my_files)),
     discord.File(random.choice(my_files)),
     discord.File(random.choice(my_files)),
-]
+  ]
   return Threedice
 
 
